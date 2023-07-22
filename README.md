@@ -1,2 +1,2 @@
-# Bonezegei_GL
-Bonezegei Graphics Library 
+# Bonezegei Graphics Library 
+
