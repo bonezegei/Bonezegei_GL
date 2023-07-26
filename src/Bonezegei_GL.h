@@ -11,6 +11,8 @@
 #define GL_COLOR_BUTTTON_CLICKED 0xFFFFFF
 #define GL_COLOR_TEXTBOX_BACKGROUND 0xffffff
 #define GL_COLOR_TEXTBOX_FONT 0x0
+#define GL_COLOR_BITMAP_BACKGROUND 0xffffff
+#define GL_COLOR_BITMAP  0x0
 
 #define GL_FONT_BUTTON FONT_ARIAL_12
 
@@ -23,13 +25,14 @@
 #include "BGL_Button.h"
 #include "BGL_TextBox.h"
 #include "BGL_ButtonBitmap.h"
-
+#include "BGL_Bitmap.h"
 
 class Bonezegei_Object;
 class BGL_Container;
 class BGL_Button;
 class BGL_TextBox;
 class BGL_ButtonBitmap;
+class BGL_Bitmap;
 
 class Bonezegei_GL {
 public:
@@ -42,7 +45,8 @@ public:
   virtual BGL_Button *addButton(Bonezegei_Object *Parent, Rect r, uint16_t ID);
   virtual BGL_TextBox *addTextBox(Bonezegei_Object *Parent, Rect r, uint16_t ID);
   virtual BGL_ButtonBitmap *addButtonBitmap(Bonezegei_Object *Parent, Rect r, uint16_t ID);
-  
+  virtual BGL_Bitmap *addBitmap(Bonezegei_Object *Parent, Rect r, uint16_t ID);
+
   virtual bool onEvent(SystemEvent event);
   virtual bool postEvent(SystemEvent event);
 

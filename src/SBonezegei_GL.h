@@ -16,6 +16,7 @@
 #include "SBGL_Button.h"
 #include "SBGL_TextBox.h"
 #include "SBGL_ButtonBitmap.h"
+#include "SBGL_Bitmap.h"
 
 
 class SBonezegei_GL : public Bonezegei_GL, public Bonezegei_Object {
@@ -46,6 +47,11 @@ public:
 
   BGL_ButtonBitmap *addButtonBitmap(Bonezegei_Object *Parent, Rect r, uint16_t ID) {
     BGL_ButtonBitmap *b = new SBGL_ButtonBitmap(this, Parent ? Parent : this, ID, r);
+    return b;
+  }
+
+  BGL_Bitmap *addBitmap(Bonezegei_Object *Parent, Rect r, uint16_t ID){
+    BGL_Bitmap *b = new SBGL_Bitmap(this, Parent ? Parent : this, ID, r);
     return b;
   }
 
