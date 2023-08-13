@@ -29,7 +29,7 @@ void SBGL_TextBox::draw() {
 
   gl->display->setFont(FONT);
   gl->display->drawRectangle(true, rect, crect, color_background);
-  gl->display->drawText(true, rect, rect, (const char *)text, color_font);
+  gl->display->drawText(true, crect, rect, (const char *)text, color_font);
   Bonezegei_Object::draw();
 }
 
